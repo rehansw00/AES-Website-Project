@@ -46,13 +46,10 @@ function Navbar() {
                   <a className="nav-link " aria-current="page" href="#">STUDENTS</a>
                 </Link >
                 <Link to="/curriculum" className="nav-item me-3">
-                  <a className="nav-link" > ACADEMICS</a>
-<<<<<<< HEAD
-=======
-                </Link>
-                <Link to="/moto" className="nav-item me-3">
-                  <a className="nav-link" href="#">MISSON & MOTO</a>
->>>>>>> 36ba5fe0794b5965f7e92fbe03a4630f2c7aa3e1
+  <a className="nav-link"> ACADEMICS</a>
+</Link>
+<Link to="/moto" className="nav-item me-3">
+  <a className="nav-link" href="#">MISSION & MOTO</a>
                 </Link>
                
                 <Link to="/campus" className="nav-item me-3">
