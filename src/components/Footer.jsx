@@ -34,11 +34,11 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-4">Support</h6>
               <div className='flex flex-col gap-3'>
                 <p>
+                  Hussen Chause (+91 9422360332)
+                  <br />
                   Sayyed Wahab (+91 9420655056)
                   <br />
-                  Hussen Chause (+91 9422360332)
-                  
-                 
+                  S.A. Shaikh (+91 9404323391)
                 </p>
                 
               </div>
@@ -47,7 +47,7 @@ function Footer() {
   {/* Contact Us Section */}
   <div className="mb-4">
     <h6 className="text-uppercase fw-bold mb-4">Contact Us</h6>
-    <p>Email: apexenglishschool501@gmail.com</p>
+    <p>apexenglishschool501@gmail.com</p>
   </div>
 
   {/* Follow Us Section */}
