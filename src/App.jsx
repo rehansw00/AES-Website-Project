@@ -17,7 +17,6 @@ import Campus from './components/Campus';
 import College from './components/About';
 import Contact from './components/Contact';
 import Timer from './components/Timer';
-import Events from './components/Events';
 import Curriculum from './components/Curriculum';
 import Faculty from './components/Faculty';
 import Students from './components/Students';
