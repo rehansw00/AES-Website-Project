@@ -20,7 +20,7 @@ const Students = () => {
         </div>
       </section>
 
-      <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
+      {/* <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">Clubs and Societies</h2>
         <p className="text-xl text-gray-600 text-center mb-8">
           Students can join various clubs and societies to explore their interests:
@@ -32,7 +32,7 @@ const Students = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
  
       <section className="mb-20">

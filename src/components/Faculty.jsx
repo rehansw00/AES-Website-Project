@@ -37,6 +37,20 @@ const aboutData = [
     
   },
   {
+    name: "Sophia Davis",
+    description: "Science Teacher",
+    image: "https://media.istockphoto.com/id/1171197670/photo/mid-adult-teacher-poses-for-portrait-in-classroom.jpg?s=612x612&w=0&k=20&c=lBqeVyIQKsBn4bIGVgRQdoE_FHc0bx58HIOVqraHTfY=", 
+    quote: "Science is a journey of discovery. Let's explore and learn together.",
+    
+  },
+  {
+    name: "Sophia Davis",
+    description: "Science Teacher",
+    image: "https://media.istockphoto.com/id/1171197670/photo/mid-adult-teacher-poses-for-portrait-in-classroom.jpg?s=612x612&w=0&k=20&c=lBqeVyIQKsBn4bIGVgRQdoE_FHc0bx58HIOVqraHTfY=", 
+    quote: "Science is a journey of discovery. Let's explore and learn together.",
+    
+  },
+  {
     name: "David Wilson",
     description: "Computer Science Teacher",
     image: "https://media.istockphoto.com/id/685132245/photo/mature-businessman-smiling-over-white-background.webp?b=1&s=170667a&w=0&k=20&c=XKyPqI4mZGKQLoUXMqJKkJ3Ovm69rIWG-sq_UstDyY4=", 

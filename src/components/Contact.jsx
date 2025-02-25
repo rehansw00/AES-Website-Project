@@ -50,46 +50,50 @@ function Contact() {
                            <form 
     ref={form} 
     onSubmit={sendEmail} 
-    className='bg-white bg-opacity-95 max-w-md mx-auto p-6 rounded-2xl shadow-xl transform hover:scale-70 transition duration-300'
+    className='bg-white bg-opacity-95 max-w-xs sm:max-w-md mx-auto p-4 sm:p-6 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300'
 >
+    <h2 className='text-3xl sm:text-5xl font-extrabold mb-6 sm:mb-8 text-center text-blue-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>
+        Contact Us
+    </h2>
+    
+    <input 
+        type="text" 
+        name="name" 
+        placeholder='Enter Your Name' 
+        value={formData.name}
+        onChange={handleChange}
+        className="w-full p-3 sm:p-4 mb-4 sm:mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" 
+        required 
+    />
+    
+    <input 
+        type="email" 
+        name="email" 
+        placeholder='Your Email Address' 
+        value={formData.email}
+        onChange={handleChange}
+        className="w-full p-3 sm:p-4 mb-4 sm:mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" 
+        required 
+    />
+    
+    <textarea 
+        name="message" 
+        placeholder='Your Message' 
+        value={formData.message}
+        onChange={handleChange}
+        className='w-full p-3 sm:p-4 mb-4 sm:mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300' 
+        rows="4" 
+        required
+    />
+    
+    <button 
+        type='submit' 
+        className="w-full py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-lg shadow-lg hover:from-blue-600 hover:to-teal-500 transition duration-300 text-base sm:text-lg font-semibold transform hover:scale-105"
+    >
+        Send Message
+    </button>
+</form>
 
-                            <h2 className='text-5xl font-extrabold mb-8 text-center text-blue-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>
-                                Contact Us
-                            </h2>
-                            <input 
-                                type="text" 
-                                name="name" 
-                                placeholder='Enter Your Name' 
-                                value={formData.name}
-                                onChange={handleChange}
-                                className="w-full p-4 mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" 
-                                required 
-                            />
-                            <input 
-                                type="email" 
-                                name="email" 
-                                placeholder='Your Email Address' 
-                                value={formData.email}
-                                onChange={handleChange}
-                                className="w-full p-4 mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" 
-                                required 
-                            />
-                            <textarea 
-                                name="message" 
-                                placeholder='Your Message' 
-                                value={formData.message}
-                                onChange={handleChange}
-                                className='w-full p-4 mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300' 
-                                rows="5" 
-                                required
-                            />
-                            <button 
-                                type='submit' 
-                                className="w-full py-4 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-lg shadow-lg hover:from-blue-600 hover:to-teal-500 transition duration-300 text-lg font-semibold transform hover:scale-105"
-                            >
-                                Send Message
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>
