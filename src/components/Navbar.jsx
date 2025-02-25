@@ -47,7 +47,7 @@ function Navbar() {
                 </Link >
                 <Link to="/curriculum" className="nav-item me-3">
                   <a className="nav-link" > ACADEMICS</a>
-                </Link>
+                </Link>//it's me om
                 <Link to="/moto" className="nav-item me-3">
                   <a className="nav-link" href="#">MISSON & MOTO</a>
                 </Link>
