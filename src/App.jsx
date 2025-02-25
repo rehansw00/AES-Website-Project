@@ -98,19 +98,7 @@ function App() {
             }
           />
 
-          <Route
-            exact
-            path='/events'
-            element={
-              <>
-                <Events />
-                <Main2 />
-                <Checkout />
-                <Main1 />
-                <Main3 />
-              </>
-            }
-          />
+        
 
           <Route
             exact
