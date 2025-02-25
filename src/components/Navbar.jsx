@@ -24,10 +24,10 @@ function Navbar() {
               <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F806786569%2F1633184430263%2F1%2Foriginal.20240712-162331?w=600&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C396%2C1600%2C800&s=6128b1650e792e3efa97a87aebe9c22f" alt="" className='navbar-brand rounded-full  object-fill  w-[50px] lg:w-[80px]  ' />
 
               <div className=' flex-col justify-center hidden lg:flex'>
-                <span className='font-bold '>Apex English School</span>
-                <span className='small text-gray-500'>Patoda, Beed</span>
+                <span className='font-bold '>Springdale Public School</span>
+                <span className='small text-gray-500'>Arkansas Districts</span>
               </div>
-              <span className='lg:hidden block text-sm'>Apex English School</span>
+              <span className='lg:hidden block text-sm'>Springdale Public School</span>
             </span>
 
 
@@ -48,10 +48,12 @@ function Navbar() {
                 <Link to="/curriculum" className="nav-item me-3">
   <a className="nav-link"> ACADEMICS</a>
 </Link>
-
+<Link to="/moto" className="nav-item me-3">
+  <a className="nav-link" href="#">MISSION & MOTO</a>
+                </Link>
                
                 <Link to="/campus" className="nav-item me-3">
-                  <a className="nav-link" href="#">GALLERY</a>
+                  <a className="nav-link" href="#">GLIMPSE</a>
                 </Link>
                 
            
@@ -114,7 +116,7 @@ function Navbar() {
           </Link>
           <Link to="/campus">
             <a href="#" className="text-white">
-              GALLERY
+              GLIMPSE
             </a>
           </Link>
         
