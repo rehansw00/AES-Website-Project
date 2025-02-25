@@ -48,9 +48,7 @@ function Navbar() {
                 <Link to="/curriculum" className="nav-item me-3">
                   <a className="nav-link" > ACADEMICS</a>
                 </Link>
-                <Link to="/moto" className="nav-item me-3">
-                  <a className="nav-link" href="#">MISSON & MOTO</a>
-                </Link>
+               
                 <Link to="/campus" className="nav-item me-3">
                   <a className="nav-link" href="#">GLIMPSE</a>
                 </Link>

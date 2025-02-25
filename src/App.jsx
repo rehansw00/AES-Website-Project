@@ -8,11 +8,11 @@ import Main1 from './components/Main1';
 import Main2 from './components/Main2';
 import Marquee from './components/Marquee';
 import Navbar from './components/Navbar';
-import Checkout from './components/Checkout';
-import Main3 from './components/Main3';
+
+
 import Footer from './components/Footer';
 import About from './components/Faculty';
-import Moto from './components/Moto';
+
 import Campus from './components/Campus';
 import College from './components/About';
 import Contact from './components/Contact';
@@ -50,9 +50,9 @@ function App() {
                 <Timer />
                 <Marquee text={`"Join us for our Annual Science Exhibition, where students showcase innovative science projects and experiments."`} />
                 <Main2 />
-                <Checkout />
+              
                 <Main1 />
-                <Main3 />
+              
               </div>
             }
           />
@@ -64,8 +64,8 @@ function App() {
               <>
                 <Faculty />
                 <Main2 />
-                <Checkout />
-                <Main3 />
+              
+                
               </>
             }
           />
@@ -76,9 +76,8 @@ function App() {
             element={
               <>
                 <Students />
-                <Main2 />
-                <Checkout />
-                <Main3 />
+             
+            
               </>
             }
           />
@@ -89,10 +88,10 @@ function App() {
             element={
               <>
                 <Campus />
-                <Main2 />
-                <Checkout />
+             
+              
                 <Main1 />
-                <Main3 />
+               
               </>
             }
           />
@@ -105,25 +104,14 @@ function App() {
             element={
               <>
                 <Curriculum />
-                <Main2 />
-                <Checkout />
-                <Main3 />
+               
+              
+               
               </>
             }
           />
 
-          <Route
-            exact
-            path='/moto'
-            element={
-              <>
-                <Moto />
-                <Main2 />
-                <Checkout />
-                <Main3 />
-              </>
-            }
-          />
+         
 
           <Route
             exact
@@ -132,9 +120,9 @@ function App() {
               <>
                 <College />
                 <Main2 />
-                <Checkout />
+              
                 <Main1 />
-                <Main3 />
+          
               </>
             }
           />
@@ -145,9 +133,7 @@ function App() {
             element={
               <>
                 <Contact />
-                {/* <Main2 />
-                <Checkout />
-                <Main3 /> */}
+                
               </>
             }
           />
