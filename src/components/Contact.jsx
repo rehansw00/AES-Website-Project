@@ -49,34 +49,7 @@ function Contact() {
             </div>
 
 
-            <div className="bg-blue-50 py-20 px-6">
-                <div className="container mx-auto">
-                    <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-900 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Admission Information</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                        <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-                            <h3 className="text-2xl font-semibold mb-4 text-blue-800">Admission Process</h3>
-                            <p className="text-gray-600 mb-6">Admission forms are available for download. Submit the completed form along with required documents at the school office.</p>
-                            <a href="https://i.pinimg.com/474x/88/6c/72/886c729c5e6310e29e269031d73a5625.jpg" target="_blank" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-full hover:from-blue-600 hover:to-teal-500 transition duration-300 transform hover:scale-105">
-                                <GetApp className="mr-2" />
-                                Download Admission Form
-                            </a>
-                        </div>
-                        <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-                            <h3 className="text-2xl font-semibold mb-4 text-blue-800">Criteria</h3>
-                            <p className="text-gray-600">Admission is based on merit and availability of seats. Entrance tests may be conducted for certain grades.</p>
-                        </div>
-                        <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-                            <h3 className="text-2xl font-semibold mb-4 text-blue-800">Important Dates</h3>
-                            <ul className="text-gray-600 space-y-2">
-                                <li>Admission Form Availability: March 1st</li>
-                                <li>Last Date for Submission: March 31st</li>
-                                <li>Entrance Test: April 15th</li>
-                                <li>Announcement of Results: April 30th</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
            
             <div className="container mx-auto py-20 px-6">
@@ -84,12 +57,14 @@ function Contact() {
                 <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
                     <iframe
                         title="Google Maps"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25765.067332804723!2d-94.16618081142514!3d36.17547421545538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c914b302758579%3A0xa131eaadd43bbc5a!2sSpringdale%2C%20AR%2C%20USA!5e0!3m2!1sen!2sin!4v1721770478701!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.6941574053094!2d75.47840537465896!3d18.812632460188887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc4cf787e9a43bd%3A0x55e81e73378bcf98!2sApex%20English%20School%20Patoda!5e1!3m2!1sen!2sin!4v1740471598023!5m2!1sen!2sin"
                         frameBorder="0"
                         className="w-full h-[500px] border-0"
                         allowFullScreen
                         loading="lazy"
                     ></iframe>
+
+
                     
                 </div>
             </div>

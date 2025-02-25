@@ -158,9 +158,9 @@ function App() {
             element={
               <>
                 <Contact />
-                <Main2 />
+                {/* <Main2 />
                 <Checkout />
-                <Main3 />
+                <Main3 /> */}
               </>
             }
           />
