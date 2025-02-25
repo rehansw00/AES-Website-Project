@@ -9,31 +9,54 @@ const Curriculum = () => {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {[
+          {[  
             {
-              title: "Primary (Grades 1-5)",
-              subjects: ["English", "Mathematics", "Science", "Social Studies", "Art", "Physical Education"],
-              color: "bg-green-500"
+              
+                "title": "NURSERY",
+                "subjects": ["Alphabets", "Numbers", "Rhymes", "Storytelling", "Drawing & Coloring", "Basic Manners", "Indoor Games", "Physical Activities"],
+                "color": "bg-red-500"
+              
+              
             },
             {
-              title: "Secondary (Grades 6-10)",
-              subjects: ["English", "Mathematics", "Science (Physics, Chemistry, Biology)", "Social Studies", "Computer Science", "Physical Education", "Art"],
-              color: "bg-blue-500"
+              "title": "LKG",
+              "subjects": ["Alphabets (A-Z)", "Numbers (1-50)", "Rhymes & Poems", "Storytelling", "Basic Shapes & Colors", "Drawing & Coloring", "Good Manners & Habits", "Physical Activities"],
+              "color": "bg-blue-500"
             },
             {
-              title: "Senior Secondary (Grades 11-12)",
-              streams: [
-                {
-                  name: "Science Stream",
-                  subjects: ["Physics", "Chemistry", "Biology", "Mathematics", "Computer Science", "English"]
-                },
-                {
-                  name: "Commerce Stream",
-                  subjects: ["Accountancy", "Business Studies", "Economics", "Mathematics", "English"]
-                }
-              ],
-              color: "bg-purple-500"
+              "title": "UKG",
+              "subjects": ["English Reading & Writing", "Basic Grammar", "Basic Math", "Rhymes & Poems", "Storytelling & Writing", "Environmental Science", "Drawing & Craft", "Good Manners & Hygiene", "Physical Activities"],
+              "color": "bg-green-500"
+            },
+            
+            {
+              "title": "Grades 1-2",
+              "subjects": ["English Reading & Writing", "Basic Grammar",  "Hindi (Sulabharathi)", "Marathi (Balbharathi)", "Mathematics", "Environmental Science", "General Knowledge", , "Basic Computer Skills" ,"Art & Craft", "Physical Education"],
+              "color": "bg-pink-500"
             }
+            ,
+            {
+              "title": "Grades 3-5",
+              "subjects": ["English (Grammar & Composition)", "Hindi (Sulabharathi)","Marathi (Balbharathi)","Mathematics", "Science (General & Environmental)", "Social Studies (History, Geography, Civics)","Computer Science", "Art & Craft", "Physical Education",  "Moral Science"],
+              "color": "bg-purple-500"
+            }
+            ,
+            {
+              "title": "Grades 6-7",
+              "subjects": [
+                "English (Advanced Grammar)",
+                "Hindi (Sulabharathi)",
+                "Marathi (Balbharathi)",
+                "Mathematics (Algebra, Geometry)",
+                "Science",
+                "Social Studies (History, Geography, Polity)",
+                "Computer Science",
+                "Physical Education (Sports, Health & Fitness)",
+                "Art & Creativity (Drawing, Drama, Dance)"
+              ],
+              "color": "bg-orange-500"
+            }
+            
           ].map((grade, index) => (
             <div key={index} className="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
               <div className={`${grade.color} py-4 px-6`}>
