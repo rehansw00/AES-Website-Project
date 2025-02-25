@@ -16,23 +16,6 @@ function Navbar() {
     <nav className='w-[100vw]'>
 
       <div className='container-fluid '>
-        <div className="row hidden lg:flex lg:items-center lg:justify-between p-3 text-white bg-gradient-to-br from-indigo-800 to-gray-800">
-          <div className="col-6 d-flex items-center">
-            <h5 className='fw-bold '>Springdale Public School</h5>
-            
-            
-          </div>
-          <div className="col-6 d-flex justify-content-end">
-            <a href="https://mangeshchate.netlify.app/" target="_blank" className="btn shadow text-light fw-bold btn-sm btn-primary ms-2 me-2">Visit My Portfolio</a>
-
-
-            <span className='d-flex justify-content-safe'>
-             
-
-            </span>
-          </div>
-
-        </div>
 
         <div className="lg:h-fit p-0 row navbar navbar-expand-lg d-flex bg-light ">
           <div className="container-fluid ">
@@ -62,9 +45,6 @@ function Navbar() {
                 <Link to="/students" className="nav-item">
                   <a className="nav-link " aria-current="page" href="#">STUDENTS</a>
                 </Link >
-                <Link to="/events" className="nav-item me-3">
-                  <a className="nav-link" > EVENTS</a>
-                </Link>
                 <Link to="/curriculum" className="nav-item me-3">
                   <a className="nav-link" > ACADEMICS</a>
                 </Link>
