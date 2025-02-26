@@ -21,6 +21,7 @@ import Curriculum from './components/Curriculum';
 import Faculty from './components/Faculty';
 import Students from './components/Students';
 
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -48,8 +49,7 @@ function App() {
                 <Coursoul />
                 <Marquee text={`"Welcome to Apex English School, where we nurture young minds for a brighter future."`} />
                 <Timer />
-                <Marquee text={`"Join us for our Annual Science Exhibition, where students showcase innovative science projects and experiments."`} />
-                <Main2 />
+                {/* <Marquee text={`"Join us for our Annual Science Exhibition, where students showcase innovative science projects and experiments."`} /> */}
               
                 <Main1 />
               
@@ -63,12 +63,14 @@ function App() {
             element={
               <>
                 <Faculty />
-                <Main2 />
+            
               
                 
               </>
             }
           />
+
+
 
           <Route
             exact
