@@ -5,7 +5,7 @@ const Students = () => {
     <div className="container mx-auto px-4 py-16 bg-gray-100">
       <h1 className="text-5xl font-bold text-center mb-16 text-indigo-800">Student Life at Apex</h1>
 
-     
+      {/* Extracurricular Activities Section */}
       <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">Extracurricular Activities</h2>
         <p className="text-xl text-gray-600 text-center mb-8">
@@ -20,21 +20,7 @@ const Students = () => {
         </div>
       </section>
 
-      {/* <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">Clubs and Societies</h2>
-        <p className="text-xl text-gray-600 text-center mb-8">
-          Students can join various clubs and societies to explore their interests:
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {['Literary Society', 'Environmental Club', 'Astronomy Club', 'Coding Club'].map((club, index) => (
-            <div key={index} className="bg-green-100 rounded-lg p-4 text-center">
-              <span className="text-lg font-medium text-green-700">{club}</span>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
- 
+      {/* Achievements Section */}
       <section className="mb-20">
         <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">Achievements</h2>
         <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -54,24 +40,36 @@ const Students = () => {
         </div>
       </section>
 
-    
-      <section>
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">Student Council</h2>
+      {/* Student Feedback Section */}
+      <section className="mb-20">
+        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">Student Feedback</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { role: 'President', name: 'Amy Parker', grade: 'Grade 12', description: 'Amy leads the student council with a vision to enhance student engagement and academic success.' },
-            { role: 'Vice President', name: 'Rajiv Mehta', grade: 'Grade 11', description: 'Rajiv supports the president and coordinates various student initiatives and events.' },
-            { role: 'Secretary', name: 'Lisa Wong', grade: 'Grade 10', description: 'Lisa manages the student council\'s records and communication, ensuring smooth operations.' }
-          ].map((member, index) => (
+            { name: 'Emma Johnson', grade: 'Grade 12', feedback: 'The school provides excellent opportunities for both academics and extracurricular activities. I feel well-prepared for the future.' },
+            { name: 'Arjun Patel', grade: 'Grade 11', feedback: 'Teachers are very supportive, and the learning environment is amazing. The student council does a great job organizing events!' },
+            { name: 'Sophia Lee', grade: 'Grade 10', feedback: 'I love the interactive learning methods used in our classes. The new facilities and resources are a great help in my studies.' }
+          ].map((student, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <h3 className="text-xl font-semibold text-indigo-700 mb-2">{member.role}</h3>
-              <p className="text-lg text-gray-800 mb-1">{member.name}</p>
-              <p className="text-md text-gray-600 mb-4">{member.grade}</p>
-              <p className="text-gray-600">{member.description}</p>
+              <p className="text-lg font-semibold text-indigo-700 mb-1">{student.name}</p>
+              <p className="text-md text-gray-600 mb-2">{student.grade}</p>
+              <p className="text-gray-600">"{student.feedback}"</p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* Student Life Image Section */}
+      <section className="text-center">
+  <h2 className="text-3xl font-semibold mb-6 text-indigo-700">A Glimpse of Student Life</h2>
+  <div className="overflow-hidden rounded-lg shadow-lg">
+    <img 
+      src="src/assets/students.jpeg" 
+      alt="Students enjoying campus life" 
+      className="mx-auto rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:brightness-110"
+    />
+  </div>
+</section>
+
     </div>
   );
 }

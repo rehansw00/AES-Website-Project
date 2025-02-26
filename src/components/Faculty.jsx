@@ -2,67 +2,86 @@ import React from 'react';
 
 const aboutData = [
   {
-    name: "John Doe",
+    name: "SHAIKH S A",
     description: "Principal",
     image: "https://studentaffairs.unl.edu/images/news-article/EmilyJohnson.jpg", 
     quote: "Welcome to our school community! We are dedicated to fostering a nurturing environment that promotes academic and personal growth. Join us in making a positive impact.",
    
   },
   {
-    name: "Jane Smith",
-    description: "Vice Principal",
-    image: "https://ichef.bbci.co.uk/news/943/cpsprodpb/1f5c/live/316a9df0-e05b-11ed-bc98-4bd262d15a9f.jpg", 
+    name: "WAHAB SAYYED",
+    description: "secretory",
+    image: "src/assets/secretory.jpeg", 
     quote: "Together, we can achieve greatness. Let’s work hand-in-hand to shape the future and build a thriving school environment.",
    
   },
   {
-    name: "Emily Johnson",
-    description: "English Teacher",
-    image: "https://t4.ftcdn.net/jpg/03/13/37/31/360_F_313373132_b9Az7XaGLRvSLHXlINXBIGPMIOLok8ZB.jpg", 
+    name: "GOLAHAR S H -B.Ed",
+    description: "All Subjects Teacher",
+    image: "src/assets/fac3.png", 
     quote: "Teaching is not just about imparting knowledge; it's about inspiring a love for learning and encouraging growth.",
    
   },
+  
   {
-    name: "Michael Brown",
+    name: "PATHAN IMRANKHAN ISAKHAN",
+    description: "Science Teacher",
+    image: "", 
+    quote: "Science is a journey of discovery. Let's explore and learn together.",
+    
+  },
+  {
+    name: "SHAIKH IRSHAD SIKANDAR",
     description: "Mathematics Teacher",
-    image: "https://www.shutterstock.com/image-photo/smiling-cheerful-young-adult-african-600nw-1850821510.jpg", 
+    image: "src/assets/fac4.png", 
     quote: "Mathematics is the language of the universe. Let's unlock its secrets together.",
-   
+    
   },
   {
-    name: "Sophia Davis",
-    description: "Science Teacher",
-    image: "https://media.istockphoto.com/id/1171197670/photo/mid-adult-teacher-poses-for-portrait-in-classroom.jpg?s=612x612&w=0&k=20&c=lBqeVyIQKsBn4bIGVgRQdoE_FHc0bx58HIOVqraHTfY=", 
+    name: "BHUJBAL RANJANA VASANT",
+    description: "Mathematics Teacher",
+    image: "src/assets/fac3.png", 
     quote: "Science is a journey of discovery. Let's explore and learn together.",
     
   },
   {
-    name: "Sophia Davis",
+    name: "RAVINDRA DINKARAO GHUMARE",
     description: "Science Teacher",
-    image: "https://media.istockphoto.com/id/1171197670/photo/mid-adult-teacher-poses-for-portrait-in-classroom.jpg?s=612x612&w=0&k=20&c=lBqeVyIQKsBn4bIGVgRQdoE_FHc0bx58HIOVqraHTfY=", 
-    quote: "Science is a journey of discovery. Let's explore and learn together.",
-    
-  },
-  {
-    name: "Sophia Davis",
-    description: "Science Teacher",
-    image: "https://media.istockphoto.com/id/1171197670/photo/mid-adult-teacher-poses-for-portrait-in-classroom.jpg?s=612x612&w=0&k=20&c=lBqeVyIQKsBn4bIGVgRQdoE_FHc0bx58HIOVqraHTfY=", 
-    quote: "Science is a journey of discovery. Let's explore and learn together.",
-    
-  },
-  {
-    name: "David Wilson",
-    description: "Computer Science Teacher",
-    image: "https://media.istockphoto.com/id/685132245/photo/mature-businessman-smiling-over-white-background.webp?b=1&s=170667a&w=0&k=20&c=XKyPqI4mZGKQLoUXMqJKkJ3Ovm69rIWG-sq_UstDyY4=", 
+    image: "src/assets/fac3.png", 
     quote: "Technology is transforming our world. Let's harness its potential and shape the future.",
     
   }
+  ,
+  {
+    name: "SAYYED KULSUM IBRAHIM",
+    description: "Environment studies Teacher",
+    image: "src/assets/fac3.png", 
+    quote: "Technology is transforming our world. Let's harness its potential and shape the future.",
+    
+  }
+  ,
+  {
+    name: "SAYYED KULSUM IBRAHIM",
+    description: "Environment studies Teacher",
+    image: "src/assets/fac3.png", 
+    quote: "Technology is transforming our world. Let's harness its potential and shape the future.",
+    
+  }
+  ,
+  {
+    name: "SAYYED KULSUM IBRAHIM",
+    description: "Environment studies Teacher",
+    image: "src/assets/fac3.png", 
+    quote: "Technology is transforming our world. Let's harness its potential and shape the future.",
+    
+  }
+  
 ];
 
 function Faculty() {
   const principal = aboutData.find(member => member.description === "Principal");
-  const vicePrincipal = aboutData.find(member => member.description === "Vice Principal");
-  const otherFaculty = aboutData.filter(member => member.description !== "Principal" && member.description !== "Vice Principal");
+  const secretory = aboutData.find(member => member.description === "secretory");
+  const otherFaculty = aboutData.filter(member => member.description !== "Principal" && member.description !== "secretory");
 
   return (
     <div className='container mx-auto px-4 py-16'>
@@ -88,16 +107,16 @@ function Faculty() {
         )}
 
         
-        {vicePrincipal && (
+        {secretory && (
           <div className=" rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
             <div className="md:flex">
               <div className="md:flex-shrink-0">
-                <img className="h-full w-full object-cover md:w-48" src={vicePrincipal.image} alt={vicePrincipal.name} />
+                <img className="h-full w-full object-cover md:w-48" src={secretory.image} alt={secretory.name} />
               </div>
               <div className="p-8">
-                <div className="uppercase tracking-wide text-sm text-green-600 font-semibold">{vicePrincipal.description}</div>
-                <h2 className="block mt-1 text-2xl leading-tight font-medium text-black">{vicePrincipal.name}</h2>
-                <p className="mt-2 text-gray-500">{vicePrincipal.quote}</p>
+                <div className="uppercase tracking-wide text-sm text-green-600 font-semibold">{secretory.description}</div>
+                <h2 className="block mt-1 text-2xl leading-tight font-medium text-black">{secretory.name}</h2>
+                <p className="mt-2 text-gray-500">{secretory.quote}</p>
               
               </div>
             </div>
@@ -109,7 +128,7 @@ function Faculty() {
       {otherFaculty.length > 0 && (
         <div>
           <h2 className="text-3xl font-bold mb-8 text-center text-indigo-800">Our Dedicated Faculty</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {otherFaculty.map((data, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
                 <img className="h-56 w-full object-cover" src={data.image} alt={data.name} />
