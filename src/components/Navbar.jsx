@@ -45,16 +45,13 @@ function Navbar() {
                 <Link to="/students" className="nav-item">
                   <a className="nav-link " aria-current="page" href="#">STUDENTS</a>
                 </Link >
-<<<<<<< HEAD
 <Link to="/curriculum" className="nav-item me-3">
   <a className="nav-link"> ACADEMICS</a>
 </Link>
 
-=======
                 <Link to="/curriculum" className="nav-item me-3">
                   <a className="nav-link" > ACADEMICS</a>
                 </Link>
->>>>>>> cd1424a1ee2a79668b38be0bbd2017f778321a9a
                 <Link to="/campus" className="nav-item me-3">
                   <a className="nav-link" href="#">GALLRY</a>
                 </Link>
