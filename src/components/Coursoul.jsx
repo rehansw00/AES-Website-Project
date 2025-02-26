@@ -12,10 +12,10 @@ function Coursoul() {
               <div className='  d-flex flex-column justify-content-center align-items-center '>
 
                 <h1 className='text-xl lg:text-5xl text-center fw-bold gap-2 flex flex-col lg:flex-row text-light '>
-                  <span>Springdale Public School</span>
+                  <span>Apex English School</span>
                 
                 </h1>
-                <h4 className='lg:text-xl text-lg  text-light  mt-3 font-bold'>Arkansas Districts</h4>
+                <h4 className='lg:text-xl text-lg  text-light  mt-3 font-bold'>Beed Districts</h4>
               </div>
             </div>
           </div>
@@ -26,10 +26,10 @@ function Coursoul() {
               <div className='  d-flex flex-column justify-content-center align-items-center '>
 
                 <h1 className='text-xl lg:text-5xl text-center fw-bold gap-2 flex flex-col lg:flex-row text-light '>
-                  <span>Springdale Public School</span>
+                  <span>Apex English School</span>
                 
                 </h1>
-                <h4 className='lg:text-xl text-lg  text-light  mt-3 font-bold'>Arkansas Districts</h4>
+                <h4 className='lg:text-xl text-lg  text-light  mt-3 font-bold'>Beed Districts</h4>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ function Coursoul() {
               <div className='  d-flex flex-column justify-content-center align-items-center '>
 
                 <h1 className='text-xl lg:text-5xl text-center fw-bold gap-2 flex flex-col lg:flex-row text-light '>
-                  <span>Springdale Public School</span>
+                  <span>Apex English School</span>
                 
                 </h1>
                 <h4 className='lg:text-xl text-sm  text-light  mt-3 font-bold'>Arkansas Districts</h4>
