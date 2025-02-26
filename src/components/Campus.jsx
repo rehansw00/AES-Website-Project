@@ -6,21 +6,20 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 Modal.setAppElement('#root');
 
-const Campus = () => {
+const School = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const campusImages = [
-    'https://upload.wikimedia.org/wikipedia/commons/a/a7/Springdale_High_School%2C_Arkansas.JPG',
-    'https://wehco.media.clients.ellingtoncms.com/img/photos/2015/09/09/72682081_Springdale-High-File_t800.jpg?90232451fbcadccc64a17de7521d859a8f88077d',
-    'https://media.tegna-media.com/assets/KFSM/images/39096167-e937-4126-a551-0e539a9e975b/39096167-e937-4126-a551-0e539a9e975b_1920x1080.jpg',
-    'https://har-bernhs.weebly.com/uploads/2/6/5/7/26574828/261266692.jpg',
-    'https://cmsv2-assets.apptegy.net/uploads/2600/file/206293/3c262193-675a-4505-a71d-77fc6762c718.jpeg',
-    'https://springdaleeducation.com/wp-content/uploads/2022/11/INFRASTRUCTURE-1.jpg',
+  const schoolImages = [
+    'src/assets/c1.jpeg',
+    'src/assets/c2.jpeg',
+    'src/assets/c3.jpeg',
+    'src/assets/c4.jpeg',
+    
   ];
 
-  const campusVideos = [
+  const schoolVideos = [
     'https://www.youtube.com/embed/FUSJkqaHgYk?si=Nv40Vzc_Y4gA_7aO',
     'https://www.youtube.com/embed/SxoVEOt_muA?si=J72T9TXqAzM9Ob6P',
   ];
@@ -43,13 +42,13 @@ const Campus = () => {
   };
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % campusImages.length);
-    setSelectedImage(campusImages[(currentImageIndex + 1) % campusImages.length]);
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % schoolImages.length);
+    setSelectedImage(schoolImages[(currentImageIndex + 1) % schoolImages.length]);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + campusImages.length) % campusImages.length);
-    setSelectedImage(campusImages[(currentImageIndex - 1 + campusImages.length) % campusImages.length]);
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + schoolImages.length) % schoolImages.length);
+    setSelectedImage(schoolImages[(currentImageIndex - 1 + schoolImages.length) % schoolImages.length]);
   };
 
   return (
@@ -58,9 +57,9 @@ const Campus = () => {
        
 
         <section>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">Campus Showcase</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">School Showcase</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-            {campusImages.map((imageUrl, index) => (
+            {schoolImages.map((imageUrl, index) => (
               <div
                 key={index}
                 className="relative overflow-hidden bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transform hover:scale-105 transition-all duration-300"
@@ -68,7 +67,7 @@ const Campus = () => {
               >
                 <img
                   src={imageUrl}
-                  alt={`Campus Image ${index + 1}`}
+                  alt={`School Image ${index + 1}`}
                   className="w-full h-40 object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -80,9 +79,9 @@ const Campus = () => {
           </div>
         </section>
         <section className="mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">Campus Video Showcase</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">School Video Showcase</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {campusVideos.map((videoUrl, index) => (
+            {schoolVideos.map((videoUrl, index) => (
               <div
                 key={index}
                 className="relative overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer transition-transform transform hover:scale-105 "
@@ -91,7 +90,7 @@ const Campus = () => {
                 <div className="h-[300px]">
                   <iframe
                     src={videoUrl}
-                    title={`Campus Video ${index + 1}`}
+                    title={`School Video ${index + 1}`}
                     className="w-full h-full object-cover rounded-lg transition-transform transform hover:scale-105"
                     allowFullScreen
                   ></iframe>
@@ -118,7 +117,7 @@ const Campus = () => {
             <div className="relative">
               <img
                 src={selectedImage}
-                alt="Enlarged Campus Image"
+                alt="Enlarged School Image"
                 className="max-h-full lg:w-[1000px] lg:h-[600px] w-[400px] h-[300px] object-cover rounded-xl shadow-lg"
               />
               <Cancel
@@ -148,7 +147,7 @@ const Campus = () => {
             <div className="relative">
               <iframe
                 src={selectedVideo}
-                title="Campus Video"
+                title="School Video"
                 className="lg:w-[1000px] lg:h-[600px] w-[400px] h-[300px] rounded-xl"
                 allowFullScreen
               ></iframe>
@@ -165,4 +164,4 @@ const Campus = () => {
   );
 }
 
-export default Campus;
+export default School;

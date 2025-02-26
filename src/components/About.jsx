@@ -22,7 +22,7 @@ const About = () => {
           </div>
           <div className="md:w-1/2 md:pl-10">
             <img 
-              src="https://encyclopediaofarkansas.net/wp-content/uploads/2022/08/SpringdaleHS2_f.jpg" 
+              src="src/assets/logo.jpeg" 
               alt="Springdale Public School Campus"
               className="w-full h-auto object-cover rounded-lg shadow-2xl"
             />
