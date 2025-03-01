@@ -2,7 +2,7 @@ import React from 'react';
 import { Lightbulb, Group, ThumbUp } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
-const About = () => {
+const About = () => {//
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-6">
