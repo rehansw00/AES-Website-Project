@@ -26,7 +26,7 @@ const aboutData = [
   {
     name: "PATHAN IMRANKHAN ISAKHAN",
     description: "Science Teacher",
-    image: "", 
+    image: "src/assets/fac3.png", 
     quote: "Science is a journey of discovery. Let's explore and learn together.",
     
   },
