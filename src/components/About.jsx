@@ -1,23 +1,26 @@
 import React from 'react';
 import { Lightbulb, Group, ThumbUp } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
-const About = () => {//
+const About = () => {
+  const { translate } = useLanguage();
+
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold mb-6 text-blue-800">Apex English School</h1>
+          <h1 className="text-5xl font-bold mb-6 text-blue-800">{translate('hero.title')}</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nurturing young minds and shaping future leaders since 2013
+            {translate('hero.description')}
           </p>
         </div>
         
         <div className="flex flex-col md:flex-row items-center justify-between mb-20">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <h2 className="text-3xl font-semibold mb-6 text-blue-700">About Us</h2>
+            <h2 className="text-3xl font-semibold mb-6 text-blue-700">{translate('about.title')}</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              At Apex, we are dedicated to fostering an environment of academic excellence, creativity, and holistic development. Our state-of-the-art facilities and passionate faculty ensure a quality education that empowers students to reach their full potential.
+              {translate('about.mission')}
             </p>
           </div>
           <div className="md:w-1/2 md:pl-10">
@@ -30,9 +33,9 @@ const About = () => {//
         </div>
         
         <div className="bg-white p-10 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-semibold mb-6 text-blue-700 text-center">Our Legacy</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-blue-700 text-center">{translate('about.legacy.title')}</h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Since our establishment in 2013, Apex English School has grown into a premier institution known for its commitment to educational excellence. We've continuously evolved, integrating modern teaching methodologies and expanding our curriculum to meet the changing needs of our students. Our nurturing and dynamic learning environment has built a reputation that spans decades.
+            {translate('about.legacy.description')}
           </p>
         </div>
 
@@ -43,23 +46,21 @@ const About = () => {//
         </div> */}
 
         <div className="bg-gradient-to-b from-blue-50 to-white py-20">
-              <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                  <h1 className="text-5xl font-bold mb-6 text-blue-900">Our Mission & Motto</h1>
-                  <p className="text-2xl font-semibold text-blue-700">
-                    Challenge Yourself, Inspire Excellence
-                  </p>
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-bold mb-6 text-blue-900">{translate('about.mission_motto.title')}</h1>
+
                 </div>
         
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-                  {mottoItems.map((item, index) => (
+                  {translate('about.mission_motto.items').map((item, index) => (
                     <div
                       key={index}
                       className="bg-white rounded-xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
                     >
                       <div className="flex items-center justify-center mb-6">
                         <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                          {React.cloneElement(item.icon, { className: "text-blue-600 text-3xl" })}
+                          {React.cloneElement(icons[item.title], { className: "text-blue-600 text-3xl" })}
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold mb-4 text-blue-800 text-center">{item.title}</h3>
@@ -68,12 +69,7 @@ const About = () => {//
                   ))}
                 </div>
         
-                <div className="bg-white rounded-xl shadow-xl p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-blue-800 text-center">Our Mission</h2>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    At <span className="font-semibold text-blue-700">Apex english School</span>, our mission is to cultivate a nurturing and inclusive environment where every student is empowered to reach their full potential. We are committed to providing a holistic education that fosters academic excellence, critical thinking, creativity, and personal growth. Through a balanced approach to learning, we aim to equip our students with the skills and values necessary to become compassionate, responsible, and successful global citizens.
-                  </p>
-                </div>
+
               </div>
             </div>
       </div>
@@ -81,22 +77,13 @@ const About = () => {//
   );
 }
 
-const mottoItems = [
-  {
-    title: 'Innovation',
-    description: 'We strive to cultivate a spirit of innovation among our students, encouraging them to think outside the box, explore new ideas, and pioneer groundbreaking solutions to real-world challenges.',
-    icon: <Lightbulb />,
-  },
-  {
-    title: 'Teamwork',
-    description: 'We recognize the importance of teamwork in achieving collective success. Through collaborative projects and extracurricular activities, we foster a collaborative mindset among our students.',
-    icon: <Group />,
-  },
-  {
-    title: 'Quality',
-    description: 'Quality is at the core of everything we do. From our rigorous academic standards to our state-of-the-art facilities and experienced faculty, we are committed to delivering excellence in education.',
-    icon: <ThumbUp />,
-  },
-];
+const icons = {
+  'Innovation': <Lightbulb />,
+  'Excellence': <ThumbUp />,
+  'Community': <Group />,
+  'नवकल्पना': <Lightbulb />,
+  'उत्कृष्टता': <ThumbUp />,
+  'समुदाय': <Group />
+};
 
 export default About;

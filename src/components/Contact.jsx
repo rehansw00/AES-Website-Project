@@ -2,10 +2,12 @@ import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { useNavigate } from 'react-router-dom';
 import { AccessTime, LocationOn } from '@mui/icons-material';
+import { useLanguage } from '../context/LanguageContext';
 
 function Contact() {
     const form = useRef();
     const navigate = useNavigate();
+    const { translate } = useLanguage();
 
     // State for form data
     const [formData, setFormData] = useState({
@@ -53,13 +55,13 @@ function Contact() {
     className='bg-white bg-opacity-95 max-w-xs sm:max-w-md mx-auto p-4 sm:p-6 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300'
 >
     <h2 className='text-3xl sm:text-5xl font-extrabold mb-6 sm:mb-8 text-center text-blue-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>
-        Contact Us
+        {translate('contact.title')}
     </h2>
     
     <input 
         type="text" 
         name="name" 
-        placeholder='Enter Your Name' 
+        placeholder={translate('contact.form.name')}
         value={formData.name}
         onChange={handleChange}
         className="w-full p-3 sm:p-4 mb-4 sm:mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" 
@@ -69,7 +71,7 @@ function Contact() {
     <input 
         type="email" 
         name="email" 
-        placeholder='Your Email Address' 
+        placeholder={translate('contact.form.email')}
         value={formData.email}
         onChange={handleChange}
         className="w-full p-3 sm:p-4 mb-4 sm:mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" 
@@ -78,7 +80,7 @@ function Contact() {
     
     <textarea 
         name="message" 
-        placeholder='Your Message' 
+        placeholder={translate('contact.form.message')}
         value={formData.message}
         onChange={handleChange}
         className='w-full p-3 sm:p-4 mb-4 sm:mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300' 
@@ -90,7 +92,7 @@ function Contact() {
         type='submit' 
         className="w-full py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-lg shadow-lg hover:from-blue-600 hover:to-teal-500 transition duration-300 text-base sm:text-lg font-semibold transform hover:scale-105"
     >
-        Send Message
+        {translate('contact.form.submit')}
     </button>
 </form>
 
@@ -104,14 +106,14 @@ function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center">
                         <AccessTime className="text-5xl text-blue-500 mb-6 mx-auto" style={{ fontSize: "3rem" }} />
-                        <h3 className="text-2xl font-semibold mb-4 text-center text-blue-800">Office Hours</h3>
+                        <h3 className="text-2xl font-semibold mb-4 text-center text-blue-800">{translate('contact.info.hours')}</h3>
                         <p className="text-gray-600 text-center">Monday - Friday: 9:00 AM - 5:00 PM</p>
                         <p className="text-gray-600 text-center">Saturday: 10:00 AM - 2:00 PM</p>
                         <p className="text-gray-600 text-center">Sunday: Closed</p>
                     </div>
                     <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center">
                         <LocationOn className="text-5xl text-blue-500 mb-6 mx-auto" style={{ fontSize: "3rem" }} />
-                        <h3 className="text-2xl font-semibold mb-4 text-center text-blue-800">Visit Us</h3>
+                        <h3 className="text-2xl font-semibold mb-4 text-center text-blue-800">{translate('contact.info.address')}</h3>
                         <p className="text-gray-600 text-center">1234 School Street, Education City, EC 12345</p>
                     </div>
                 </div>

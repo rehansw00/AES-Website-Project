@@ -1,68 +1,61 @@
 import React, { useState } from 'react'
-
-
 import { Link } from 'react-router-dom'
 import { Menu } from '@mui/icons-material';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { translate } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-
   return (
-
     <nav className='w-[100vw]'>
-
-      <div className='container-fluid '>
-
-        <div className="lg:h-fit p-0 row navbar navbar-expand-lg d-flex bg-light ">
-          <div className="container-fluid ">
+      <div className='container-fluid'>
+        <div className="lg:h-fit p-0 row navbar navbar-expand-lg d-flex bg-light">
+          <div className="container-fluid">
             <span className='navbar-brand flex items-center'>
-
-            <img src="/logo_main.svg" alt="Logo" className="navbar-brand rounded-full object-fill w-[50px] lg:w-[80px]" />
-
-
-              <div className=' flex-col justify-center hidden lg:flex'>
-                <span className='font-bold '>Apex English School</span>
+              <img src="/logo_main.svg" alt="Logo" className="navbar-brand rounded-full object-fill w-[50px] lg:w-[80px]" />
+              <div className='flex-col justify-center hidden lg:flex'>
+                <span className='font-bold'>Apex English School</span>
                 <span className='small text-gray-500'>Beed Districts</span>
               </div>
               <span className='lg:hidden block text-sm'>Apex English School</span>
             </span>
 
-
-            <div className="flex " id="navbarNav">
-              <ul className="navbar-nav hidden lg:flex align-items-center ">
+            <div className="flex items-center" id="navbarNav">
+              <ul className="navbar-nav hidden lg:flex align-items-center">
                 <Link to="/" className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">HOME</a>
-                </Link >
+                  <a className="nav-link" aria-current="page" href="#">{translate('nav.home')}</a>
+                </Link>
                 <Link to='/aboutus' className="nav-item me-3">
-                  <a className="nav-link" href="#">ABOUT US</a>
+                  <a className="nav-link" href="#">{translate('nav.about')}</a>
                 </Link>
                 <Link to="/faculty" className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">FACULTY</a>
-                </Link >
+                  <a className="nav-link" aria-current="page" href="#">{translate('nav.faculty')}</a>
+                </Link>
                 <Link to="/students" className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">STUDENTS</a>
-                </Link >
+                  <a className="nav-link" aria-current="page" href="#">{translate('nav.students')}</a>
+                </Link>
                 <Link to="/curriculum" className="nav-item me-3">
-                  <a className="nav-link" > ACADEMICS</a>
+                  <a className="nav-link">{translate('nav.academics')}</a>
                 </Link>
                 <Link to="/campus" className="nav-item me-3">
-                  <a className="nav-link" href="#">GALLERY</a>
+                  <a className="nav-link" href="#">{translate('nav.gallery')}</a>
                 </Link>
-                
-           
-                <li className="nav-item  me-3">
-                  <button className='btn  shadow btn-primary'>
+                <li className="nav-item me-3">
+                  <button className='btn shadow btn-primary'>
                     <Link to="/contact" className="text-light text-decoration-none">
-                      <span>Contact</span>
+                      <span>{translate('nav.contact')}</span>
                     </Link>
                   </button>
                 </li>
-
+                <li className="nav-item me-3">
+                  <LanguageSelector />
+                </li>
               </ul>
               <div className='d-lg-none d-block'>
                 <Menu className='fw-bold fs-1 cursor-pointer ' onClick={()=>setIsOpen(true)}/>
@@ -78,43 +71,39 @@ function Navbar() {
         <ul className="mt-8 space-y-4 flex flex-col gap-3">
           <Link to="/">
             <a href="#" className="text-white">
-              HOME
+              {translate('nav.home')}
             </a>
           </Link>
           <Link to="/aboutus">
             <a href="#" className="text-white">
-            ABOUT US
+            {translate('nav.about')}
             </a>
           </Link>
           <Link to="/faculty">
             <a href="#" className="text-white">
-              FACULTY
+              {translate('nav.faculty')}
             </a>
           </Link>
           <Link to="/students">
             <a href="#" className="text-white">
-              STUDENTS
+              {translate('nav.students')}
             </a>
           </Link>
-         
           <Link to="/curriculum" >
             <a href="#" className="text-white">
             
-            ACADEMICS
+            {translate('nav.academics')}
             </a>
           </Link>
-       
           <Link to="/campus">
             <a href="#" className="text-white">
-              GLIMPSE
+              {translate('nav.gallery')}
             </a>
           </Link>
-        
-        
           <li>
             <button className="btn bg-blue-500 text-white">
               <Link to="/contact" className="text-white">
-                <span>CONTACT US</span>
+                <span>{translate('nav.contact')}</span>
               </Link>
             </button>
           </li>
@@ -123,15 +112,10 @@ function Navbar() {
 
             </div>
           </div>
-
-
         </div>
-
-
       </div>
     </nav>
-
-  )
+  );
 }
 
 export default Navbar
